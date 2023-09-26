@@ -2,7 +2,7 @@
   "name": "food-delivery-service",
   "version": "1.0.0",
   "description": "",
-  "homepage": "..c",
+  "homepage": "..",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /food-delivery-service/"
