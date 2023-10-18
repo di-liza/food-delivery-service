@@ -1,15 +1,15 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "production",
+  mode: 'production',
   entry: {
-    filename: path.resolve(__dirname, "src/index.js"),
+    filename: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "[name][contenthash].js",
-    assetModuleFilename: "[name][ext]",
+    path: path.resolve(__dirname, 'public'),
+    filename: '[name][contenthash].js',
+    assetModuleFilename: 'assets/[name][ext]',
     clean: true,
   },
   performance: {
@@ -19,7 +19,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.join(__dirname, 'public'),
     },
     compress: true,
     port: 9000,
@@ -28,31 +28,37 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          'style-loader',
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
+          'sass-loader',
         ],
       },
+      // images
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
+      // fonts
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack template",
-      filename: "index.html",
-      template: "src/index.html",
+      title: 'Webpack template',
+      filename: 'index.html',
+      template: 'src/index.html',
     }),
   ],
 };

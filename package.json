@@ -1,5 +1,5 @@
 {
-  "name": "food-delivery-service",
+  "name": "webpack-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
