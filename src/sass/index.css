@@ -1,3 +1,138 @@
+@import "../../node_modules/modern-normalize/modern-normalize.css";
 body {
-  background-color: aqua;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg-body);
+  color: var(--text-primary);
+}
+
+button {
+  display: inline-block;
+  border: transparent;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --background-primary: #fff;
+  --background-secondary: #fefefe;
+  --main-yellow: #ffe550;
+  --light-green: #bbf330;
+  --dark-green: #7eb101;
+  --text-primary: #2c2c2c;
+  --text-secondary: #000;
+  --grey: #505050;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 16px;
+    width: 1280px;
+  }
+}
+
+.section {
+  width: 100%;
+  padding: 60px 0;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 100px 0;
+  }
+}
+
+.header {
+  width: 100%;
+  background-color: var(--background-secondary);
+  box-shadow: 0px 4px 24px 0px rgba(105, 105, 105, 0.1);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu-open-btn {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 22px;
+  right: 18px;
+}
+
+.header__menu-open-icon:hover,
+.header__menu-open-icon :active {
+  fill: var(--dark-green);
+}
+
+.menu {
+  display: none;
+  width: 130px;
+  height: 255px;
+  flex-shrink: 0;
+  border-radius: 30px 0px 30px 30px;
+  background: var(--background-secondary);
+  box-shadow: 0px 4px 24px 0px rgba(105, 105, 105, 0.1);
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  overflow: hidden;
+}
+
+.open {
+  display: block;
+}
+
+.menu__close-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.menu__link {
+  color: var(--text-secondary);
+  display: block;
+  width: 100%;
+  padding: 16px;
+}
+.menu__link:hover,
+.menu__link :active {
+  background-color: var(--light-green);
+}
+
+.section {
+  padding-top: 132px;
 }/*# sourceMappingURL=index.css.map */

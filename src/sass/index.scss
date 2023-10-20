@@ -3,7 +3,9 @@
 @import "./base/body";
 @import "./utils/mixins";
 @import "./utils/variables";
-// @import "./components/welcome";
+
+@import "./common/container";
+@import "./common/section";
 
 @import "./components/header";
 @import "./components/menu";

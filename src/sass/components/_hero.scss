@@ -1,0 +1,21 @@
+.hero {
+  padding-top: 132px;
+}
+
+.hero__title {
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+.hero__description {
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+.hero__button {
+  padding: 6px 18px;
+  border-radius: 30px;
+  background-color: var(--light-green);
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19.5px;
+}
