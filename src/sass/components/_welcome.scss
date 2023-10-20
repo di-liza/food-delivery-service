@@ -1,0 +1,32 @@
+.welcome-section {
+  text-align: center;
+  width: 500px;
+  background: #a5a5ab5c;
+  padding: 20px;
+  border-radius: 7px;
+  border: 1px solid #ffffff61;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s;
+}
+
+.welcome-container:hover {
+  background-color: #f0f0f0; /* Изменение цвета фона при наведении курсора */
+}
+
+.welcome-heading {
+  font-size: 36px;
+  color: #333;
+}
+
+.welcome-text {
+  font-size: 18px;
+  color: #d9d3d3;
+}
+
+.built-by {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 20px;
+}

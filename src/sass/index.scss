@@ -1,0 +1,15 @@
+@import "../../node_modules/modern-normalize/modern-normalize.css";
+
+@import "./base/body";
+@import "./utils/mixins";
+@import "./utils/variables";
+// @import "./components/welcome";
+
+@import "./components/header";
+@import "./components/menu";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/favorites";
+@import "./components/reviews";
+@import "./components/subscribe";
+@import "./components/footer";
