@@ -23,3 +23,15 @@
     @content;
   }
 }
+
+@mixin section($pt: 60px, $pb: 60px) {
+  width: 100%;
+
+  padding-top: $pt;
+  padding-bottom: $pb;
+
+  @include tablet {
+    padding-top: $pt;
+    padding-bottom: $pb;
+  }
+}
