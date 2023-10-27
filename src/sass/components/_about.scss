@@ -1,11 +1,62 @@
 .about {
   @include section();
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/backgrounds/about-background-mobile-320-1x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 1050px;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
 }
 
-// .about__img-wrapp {
-// }
-// .about__image {
-// }
+.about__img-wrapp {
+  background-color: var(--background-primary);
+  width: 255px;
+  height: 255px;
+  padding: 12px;
+  border-radius: 50%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 279px;
+    border-radius: 50%;
+    top: -13px;
+    left: -5%;
+    outline: var(--background-primary) 5px solid;
+  }
+}
+.about__image {
+  position: absolute;
+  z-index: 2;
+  bottom: 53px;
+  left: 30px;
+  height: 255px;
+
+  // &::after {
+  //   content: ""; /* Добавьте свойство content */
+  //   position: absolute;
+  //   width: 128px;
+  //   height: 44px;
+  //   background: radial-gradient(
+  //     50% 50% at 50% 50%,
+  //     #2f583f 0%,
+  //     rgba(105, 105, 105, 0) 100%
+  //   );
+  //   top: 0;
+  //   z-index: 10;
+  // }
+}
 // .about__title {
 // }
 // .about__description {
