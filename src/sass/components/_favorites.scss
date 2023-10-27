@@ -1,14 +1,21 @@
-// .favorites {
-// }
-// .container {
-// }
-// .favorites__title {
-// }
-// .favorites__description {
-// }
-// .favorites__list {
-// }
-// .favorites__item {
-// }
-// .favorites__image {
-// }
+.favorites {
+}
+.favorites__title {
+}
+.favorites__description {
+}
+.favorites__list--mobile {
+  @include tablet {
+    display: none;
+  }
+}
+.favorites__list--tablet {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+.favorites__item {
+}
+.favorites__image {
+}
