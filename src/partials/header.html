@@ -1,40 +1,99 @@
 <header class="header">
-  <nav class="header__nav">
-    <div class="container">
-      <img
-        class="header__logo"
-        src="./icons/logo.png"
-        alt="logo"
-        width="66"
-        height="52"
-      />
+  <div class="container">
+      <nav class="header__nav">
+      <a href="#hero">
+        <img
+          class="header__logo"
+          src="./icons/logo.png"
+          alt="logo"
+          width="66"
+          height="52"
+        />
+      </a>
       <button class="header__menu-open-btn" id="menu-open-btn" type="button">
         <svg class="header__menu-open-icon" width="28" height="28">
           <use href="./icons/sprite.svg#icon-menu"></use>
         </svg>
       </button>
-      <div class="menu">
-        <button class="menu__close-btn" id="menu-close-btn" type="button">
-          <svg class="menu__close-icon" width="10" height="10">
+      <div class="mob-menu">
+        <button
+          class="mob-menu__close-btn"
+          id="mob-menu-close-btn"
+          type="button"
+        >
+          <svg class="mob-menu__close-icon" width="10" height="10">
             <use href="./icons/sprite.svg#icon-close"></use>
           </svg>
         </button>
 
-        <ul class="menu__list">
-          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-          <li class="menu__item">
-            <a href="#about" class="menu__link">About</a>
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item">
+            <a href="#hero" class="mob-menu__link">Home</a>
           </li>
-          <li class="menu__item">
-            <a href="#service" class="menu__link">Service</a>
+          <li class="mob-menu__item">
+            <a href="#about" class="mob-menu__link">About</a>
           </li>
-          <li class="menu__item">
-            <a href="#menu" class="menu__link">Menu</a>
+          <li class="mob-menu__item">
+            <a href="#service" class="mob-menu__link">Service</a>
           </li>
-          <li class="menu__item">
-            <a href="#contact" class="menu__link">Contact</a>
+          <li class="mob-menu__item">
+            <a href="#mob-menu" class="mob-menu__link">mob-menu</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="#contact" class="mob-menu__link">Contact</a>
           </li>
         </ul>
+      </div>
+
+      <div class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header__menu-link"
+              >Home</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header__menu-link"
+              >About</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header__menu-link"
+              >Service</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header__menu-link"
+              >Menu</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header__menu-link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <button type="button" class="header__order-button">Order now</button>
       </div>
     </div>
   </nav>

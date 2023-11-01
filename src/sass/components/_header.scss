@@ -6,23 +6,65 @@
   position: fixed;
   top: 0;
   z-index: 100;
+  color: var(--text-secondary);
+  line-height: 150%; /* 19.5px */
 }
 .header__nav {
   display: flex;
   justify-content: space-between;
 }
-.header__logo {
-}
+
 .header__menu-open-btn {
   width: 28px;
   height: 28px;
   position: absolute;
   top: 22px;
   right: 18px;
+
+  @include tablet {
+    display: none;
+  }
 }
 .header__menu-open-icon {
   &:hover,
   :active {
     fill: var(--dark-green);
+  }
+}
+.header__menu {
+  display: none;
+  @include tablet {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+}
+.header__menu-list {
+  @include tablet {
+    display: flex;
+    gap: 28px;
+  }
+}
+
+.header__menu-link {
+  font-size: 14px;
+  &:hover,
+  :active,
+  :focus {
+    color: var(--light-green);
+    text-decoration: underline;
+  }
+}
+.header__order-button {
+  display: none;
+  @include tablet {
+    display: inline-block;
+
+    border-radius: 30px;
+    background: var(--light-green);
+
+    padding: 6px 18px;
+
+    font-size: 13px;
   }
 }

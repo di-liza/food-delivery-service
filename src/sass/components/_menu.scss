@@ -1,4 +1,4 @@
-.menu {
+.mob-menu {
   display: none;
 
   width: 130px;
@@ -18,22 +18,25 @@
 }
 .open {
   display: block;
+  @include tablet {
+    display: none;
+  }
 }
 
-.menu__close-btn {
+.mob-menu__close-btn {
   width: 24px;
   height: 24px;
   position: absolute;
   top: 4px;
   right: 4px;
 }
-.menu__close-icon {
-}
-.menu__list {
-}
-.menu__item {
-}
-.menu__link {
+// .mob-menu__close-icon {
+// }
+// .mob-menu__list {
+// }
+// .mob-menu__item {
+// }
+.mob-menu__link {
   color: var(--text-secondary);
   display: block;
   width: 100%;
