@@ -1,11 +1,20 @@
 .favorites {
   @include section();
+  text-align: center;
 }
 .favorites__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
 }
 .favorites__description {
+  margin-bottom: 60px;
+  font-size: 14px;
 }
 .favorites__list--mobile {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
   @include tablet {
     display: none;
   }
@@ -13,10 +22,22 @@
 .favorites__list--tablet {
   display: none;
   @include tablet {
-    display: block;
+    display: flex;
   }
 }
 .favorites__item {
+  width: 280px;
+  height: 282px;
+
+  border-radius: 140px;
+  border: 11px solid var(--main-yellow);
+  background: var(--background-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 .favorites__image {
 }
