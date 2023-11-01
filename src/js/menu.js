@@ -1,6 +1,6 @@
 const openMenuBTN = document.getElementById("menu-open-btn");
 console.log("openMenuBTN:", openMenuBTN);
-const closeMenuBTN = document.getElementById("menu-close-btn");
+const closeMenuBTN = document.getElementById("mob-menu-close-btn");
 console.log("closeMenuBTN:", closeMenuBTN);
 
 const menu = document.querySelector(".mob-menu");

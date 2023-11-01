@@ -40,3 +40,25 @@ p {
   padding: 0;
   margin: 0;
 }
+/* Для браузеров на основе WebKit */
+/* Конфигурация полосы прокрутки */
+::-webkit-scrollbar {
+  width: 8px; /* Ширина скроллбара */
+}
+
+/* Стили полосы прокрутки */
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+
+  background-color: rgba(
+    169,
+    169,
+    169,
+    0.7
+  ); /* Цвет скроллбара с прозрачностью */
+}
+
+/* Стили трека (фона) полосы прокрутки */
+::-webkit-scrollbar-track {
+  background: transparent; /* Фон трека прозрачный */
+}
