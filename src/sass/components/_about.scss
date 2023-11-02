@@ -14,6 +14,13 @@
     z-index: -1;
     top: 0;
     left: 0;
+
+    @include tablet {
+      background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
+    }
+    @include tablet {
+      background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
+    }
   }
   color: var(--text-primary);
 }
