@@ -1,32 +1,54 @@
-// .footer {
-// }
-// .container {
-// }
-// .footer__logo {
-// }
-// .footer__menu {
-// }
-// .footer__menu-item {
-// }
-// .footer__subscribe-title {
-// }
-// .footer__subscribe-form {
-// }
-// .footer__subscribe-input {
-// }
-// .footer__subscribe-button {
-// }
-// .footer__subscribe-text {
-// }
-// .footer__subscribe-link {
-// }
-// .footer__links {
-// }
-// .footer__links-item {
-// }
-// .footer__copyright {
-// }
-// .footer__backgrounds {
-// }
-// .footer__background-image {
-// }
+.footer {
+  @include section(60, 63);
+  background-color: var(--background-secondary);
+  box-shadow: 0px -4px 24px 0px rgba(105, 105, 105, 0.1);
+
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/fruits/orange-mobile-1x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 259px;
+    width: 104px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+}
+.footer__content {
+  position: relative;
+
+  z-index: 2;
+}
+.footer__logo {
+}
+.footer__menu {
+}
+.footer__menu-item {
+}
+.footer__subscribe-title {
+}
+.footer__subscribe-form {
+}
+.footer__subscribe-input {
+}
+.footer__subscribe-button {
+}
+.footer__subscribe-text {
+}
+.footer__subscribe-link {
+}
+.footer__links {
+}
+.footer__links-item {
+}
+.footer__copyright {
+}
+.footer__backgrounds {
+}
+.footer__background-image {
+}
