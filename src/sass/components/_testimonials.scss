@@ -1,28 +1,85 @@
-// .testimonials {
-// }
-// .container {
-// }
-// .testimonials__background {
-// }
-// .testimonials__title {
-// }
-// .testimonials__description {
-// }
-// .testimonials__list {
-// }
-// .testimonials__item {
-// }
-// .testimonials__stars {
-// }
-// .testimonials__quote {
-// }
-// .testimonials__author {
-// }
-// .testimonials__author-image {
-// }
-// .testimonials__author-name {
-// }
-// .testimonials__author-title {
-// }
-// .testimonials__image {
-// }
+.testimonials {
+  @include section(60, 60);
+  font-size: 14px;
+
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/backgrounds/services-background-mobile-320-1x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}
+
+.testimonials__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.testimonials__description {
+  margin-bottom: 32px;
+}
+.testimonials__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 17px;
+}
+.testimonials__item {
+  background-color: var(--background-primary);
+  border-radius: 0 25px 25px 25px;
+  padding: 8px 8px 10px 8px;
+}
+.testimonials__stars {
+  margin-bottom: 28px;
+}
+.testimonials__quote {
+  margin-bottom: 42px;
+  display: block;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+.testimonials__author {
+  display: flex;
+  gap: 25px;
+}
+
+.testimonials__naming {
+  position: relative;
+  line-height: 21px;
+  ::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--dark-green);
+    top: 0;
+    right: -14px;
+  }
+}
+
+.testimonials__author-image {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--main-yellow);
+
+  width: 48px;
+  height: 48px;
+}
+.testimonials__author-name {
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+.testimonials__author-title {
+}
+.testimonials__image {
+}
