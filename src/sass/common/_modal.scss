@@ -9,16 +9,35 @@
   z-index: 1000;
 }
 .modal {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  transform: translateY(-50%);
   background-color: aliceblue;
-  width: 20px;
-  height: 30px;
+  width: 320px;
+  height: 449px;
+  padding: 32px 20;
+  text-align: center;
+
+  border-radius: 30px;
+  background: var(--main-yellow);
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
 .openModal {
   display: block;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: var(--background-primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
 }
