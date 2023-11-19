@@ -1,5 +1,6 @@
 .order-form {
   width: 280px;
+  color: var(--text-primary);
 }
 .order-form__title {
   margin-bottom: 20px;
@@ -40,4 +41,12 @@
   }
 }
 .order-form__submit {
+  border-radius: 30px;
+  border: 2px solid var(--dark-green);
+  background: var(--background-primary);
+  padding: 10px 38px;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
 }
