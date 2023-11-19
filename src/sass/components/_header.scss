@@ -55,16 +55,3 @@
     text-decoration: underline;
   }
 }
-.header__order-button {
-  display: none;
-  @include tablet {
-    display: inline-block;
-
-    border-radius: 30px;
-    background: var(--light-green);
-
-    padding: 6px 18px;
-
-    font-size: 13px;
-  }
-}

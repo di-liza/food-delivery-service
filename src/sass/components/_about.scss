@@ -53,20 +53,6 @@
   bottom: 53px;
   left: 30px;
   height: 255px;
-
-  // &::after {
-  //   content: ""; /* Добавьте свойство content */
-  //   position: absolute;
-  //   width: 128px;
-  //   height: 44px;
-  //   background: radial-gradient(
-  //     50% 50% at 50% 50%,
-  //     #2f583f 0%,
-  //     rgba(105, 105, 105, 0) 100%
-  //   );
-  //   top: 0;
-  //   z-index: 10;
-  // }
 }
 .about__title {
   font-size: 28px;
@@ -77,8 +63,7 @@
   margin-bottom: 28px;
   line-height: 20px;
 }
-// .about__list {
-// }
+
 .about__item {
   &:not(:last-child) {
     margin-bottom: 28px;
@@ -106,23 +91,13 @@
   font-size: 14px;
   line-height: 20px;
 }
-// .about__item--easy {
-// }
+
 .about__controls {
   display: flex;
   gap: 24px;
   align-items: center;
 }
-.about__btn {
-  padding: 10px 22px;
-  border-radius: 30px;
-  border: 2px solid var(--dark-green);
-  background: var(--background-primary);
 
-  color: var(--text-primary);
-  font-size: 13px;
-  font-weight: 500;
-}
 .about__link {
   display: flex;
   align-items: flex-start;
@@ -132,5 +107,3 @@
   font-size: 13px;
   font-weight: 400;
 }
-// .about__link-icon {
-// }

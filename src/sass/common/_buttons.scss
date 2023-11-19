@@ -1,0 +1,45 @@
+.button {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+  border-radius: 30px;
+}
+.order-btn {
+  @include tablet {
+    display: inline-block;
+  }
+  &--solid {
+    padding: 6px 18px;
+    background-color: var(--light-green);
+    &:hover {
+      background-color: var(--hover-yellow);
+    }
+  }
+  &--transparent {
+    padding: 10px 22px;
+    border: 2px solid var(--dark-green);
+    background-color: var(--background-primary);
+    &:hover {
+      border: var(--hover-yellow);
+    }
+  }
+}
+
+.subscribe-btn {
+  padding: 11px 22px;
+  width: 103px;
+  &--solid {
+    background-color: var(--light-green);
+    &:hover {
+      background-color: var(--hover-yellow);
+    }
+  }
+  &--transparent {
+    border: 2px solid var(--dark-green);
+    background-color: var(--background-primary);
+    &:hover {
+      border: var(--hover-yellow);
+    }
+  }
+}

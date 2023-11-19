@@ -119,16 +119,7 @@
     line-height: 18px;
   }
 }
-.footer__subscribe-button {
-  width: 103px;
-  padding: 8px 22px;
-  border-radius: 30px;
-  border: 1px solid var(--dark-green);
 
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 19px;
-}
 .footer__subscribe-text {
   margin-bottom: 60px;
   text-align: left;
@@ -140,16 +131,9 @@
 .footer__links {
   display: flex;
   gap: 32px;
+  justify-content: center;
   margin-bottom: 40px;
 
   color: var(--dark-green);
   text-decoration: underline;
 }
-// .footer__links-item {
-// }
-// .footer__copyright {
-// }
-// .footer__backgrounds {
-// }
-// .footer__background-image {
-// }
