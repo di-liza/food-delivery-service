@@ -26,33 +26,17 @@
 }
 
 .about__img-wrapp {
-  background-color: var(--background-primary);
-  width: 255px;
-  height: 255px;
-  padding: 12px;
-  border-radius: 50%;
   position: relative;
+  width: 280px;
+  height: 280px;
   margin-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 280px;
-    height: 279px;
-    border-radius: 50%;
-    top: -13px;
-    left: -5%;
-    outline: var(--background-primary) 5px solid;
-  }
 }
 .about__image {
   position: absolute;
   z-index: 2;
-  bottom: 53px;
-  left: 30px;
-  height: 255px;
+  left: 0;
+  bottom: 0;
+  height: 309px;
 }
 .about__title {
   font-size: 28px;

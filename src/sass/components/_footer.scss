@@ -42,23 +42,7 @@
     transform: translateX(-50%);
   }
 }
-.apple-bg {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/fruits/apple-mobile-1x.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-    height: 116px;
-    width: 110px;
-    z-index: 1;
-    top: 68px;
-    left: 0;
-  }
-}
 .footer__nav {
   // display: flex;
   // gap: 46px;
@@ -102,21 +86,6 @@
   width: 279px;
   flex-direction: column;
   justify-content: flex-start;
-}
-.footer__subscribe-input {
-  width: 100%;
-  padding: 12px;
-
-  color: var(--text-primary);
-  border-radius: 30px;
-  border: 1px solid var(--main-yellow);
-  background: var(--background-primary);
-  ::placeholder {
-    color: var(--grey);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-  }
 }
 
 .footer__subscribe-text {

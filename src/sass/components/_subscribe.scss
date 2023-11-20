@@ -22,18 +22,3 @@
   //   align-items: flex-end;
   text-align: right;
 }
-.subscribe__input {
-  padding: 12px;
-  width: 279px;
-  margin-bottom: 20px;
-  color: var(--text-primary);
-  border-radius: 30px;
-  border: 1px solid var(--main-yellow);
-  background: var(--background-primary);
-  ::placeholder {
-    color: var(--grey);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-  }
-}
