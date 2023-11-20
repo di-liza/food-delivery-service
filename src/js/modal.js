@@ -1,4 +1,4 @@
-const orderBtn = document.getElementById("order-btn");
+const orderBtn = document.querySelectorAll("#order-btn");
 const backdrop = document.getElementById("backdrop");
 const closeModalBtn = document.getElementById("close-modal");
 
@@ -12,7 +12,7 @@ const handleCloseModal = ({ code }) => {
   code === "Escape" && backdrop.classList.remove("openModal");
 };
 
-orderBtn.addEventListener("click", handleOpenModal);
+orderBtn.forEach((btn) => btn.addEventListener("click", handleOpenModal));
 closeModalBtn.addEventListener("click", handleCloseModal);
 backdrop.addEventListener("click", handleCloseModal);
 window.addEventListener("keydown", handleCloseModal);
