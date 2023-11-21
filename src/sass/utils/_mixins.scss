@@ -29,9 +29,4 @@
 
   padding-top: $pt;
   padding-bottom: $pb;
-
-  @include tablet {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
 }

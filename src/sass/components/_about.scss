@@ -1,6 +1,13 @@
 .about {
-  @include section();
   position: relative;
+  color: var(--text-primary);
+
+  @include section();
+
+  @include tablet {
+    @include section(150, 88);
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -17,12 +24,13 @@
 
     @include tablet {
       background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
+      width: 100vw;
+      height: 100vh;
     }
     @include tablet {
       background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
     }
   }
-  color: var(--text-primary);
 }
 
 .about__img-wrapp {
@@ -30,6 +38,37 @@
   width: 280px;
   height: 280px;
   margin-bottom: 60px;
+
+  @include tablet {
+    top: 150px;
+  }
+}
+.about__bg-apples {
+  position: absolute;
+  top: 15px;
+  left: 312px;
+
+  display: flex;
+  gap: 44px;
+  align-items: flex-end;
+}
+.about__bg-apple--middle {
+  background-image: url("../images/fruits/tablet-bg-middle-apple-1x.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 166px;
+  height: 211px;
+}
+.about__bg-apple--smalll {
+  background-image: url("../images/fruits/tablet-bg-small-apple-1x.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 108px;
+  height: 136px;
 }
 .about__image {
   position: absolute;
@@ -37,6 +76,9 @@
   left: 0;
   bottom: 0;
   height: 309px;
+}
+.about__content-wrapp {
+  margin-top: 204px;
 }
 .about__title {
   font-size: 28px;
