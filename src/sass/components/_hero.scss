@@ -6,7 +6,9 @@
     height: 473px;
   }
 }
-
+.hero__content-wrap {
+  position: relative;
+}
 .hero__title {
   font-size: 28px;
   margin-bottom: 28px;
@@ -37,9 +39,9 @@
     display: block;
     width: 320px;
     height: 320px;
-    position: relative;
-    top: -221px;
-    right: -408px;
+    position: absolute;
+    top: 89px;
+    right: 0;
     z-index: 9;
   }
 }
