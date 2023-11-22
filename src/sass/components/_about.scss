@@ -1,13 +1,141 @@
+// .about {
+//   position: relative;
+//   color: var(--text-primary);
+
+//   @include section();
+
+//   @include tablet {
+//     @include section(150, 88);
+//   }
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     background-image: url("../images/backgrounds/about-background-mobile-320-1x.jpg");
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+
+//     height: 100%;
+//     width: 100%;
+//     z-index: -1;
+//     top: 0;
+//     left: 0;
+
+//     @include tablet {
+//       background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
+//     }
+//   }
+// }
+
+// .about__img-wrapp {
+//   display: none;
+
+//   @include tablet {
+//     position: relative;
+//     width: 280px;
+//     height: 280px;
+//     margin-bottom: 60px;
+//     top: 50px;
+//   }
+// }
+// .about__bg-apples {
+//   position: absolute;
+//   top: 15px;
+//   left: 312px;
+
+//   display: flex;
+//   gap: 44px;
+//   align-items: flex-end;
+// }
+// .about__bg-apple--middle {
+//   background-image: url("../images/fruits/tablet-bg-middle-apple-1x.png");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+
+//   width: 166px;
+//   height: 211px;
+// }
+// .about__bg-apple--smalll {
+//   background-image: url("../images/fruits/tablet-bg-small-apple-1x.png");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+
+//   width: 108px;
+//   height: 136px;
+// }
+// .about__image {
+//   position: absolute;
+//   z-index: 2;
+//   left: 0;
+//   bottom: 0;
+//   height: 309px;
+// }
+// .about__content-wrapp {
+//   margin-top: 204px;
+// }
+// .about__title {
+//   font-size: 28px;
+//   font-weight: 700;
+//   margin-bottom: 28px;
+// }
+// .about__description {
+//   margin-bottom: 28px;
+//   line-height: 20px;
+//   font-size: 14px;
+// }
+
+// .about__item {
+//   &:not(:last-child) {
+//     margin-bottom: 28px;
+//   }
+//   &:last-child {
+//     margin-bottom: 28px;
+//   }
+// }
+
+// .about__item-icon {
+//   width: 48px;
+//   height: 48px;
+//   background-color: var(--background-primary);
+//   border-radius: 50%;
+//   padding: 8px;
+//   margin-bottom: 8px;
+// }
+// .about__item-title {
+//   margin-bottom: 16px;
+//   font-size: 18px;
+//   font-weight: 700;
+// }
+
+// .about__item-description {
+//   font-size: 14px;
+//   line-height: 20px;
+// }
+
+// .about__controls {
+//   display: flex;
+//   gap: 24px;
+//   align-items: center;
+// }
+
+// .about__link {
+//   display: flex;
+//   align-items: flex-start;
+//   gap: 3px;
+
+//   color: var(--text-secondary);
+//   font-size: 13px;
+//   font-weight: 400;
+// }
 .about {
-  position: relative;
-  color: var(--text-primary);
-
   @include section();
-
+  position: relative;
   @include tablet {
-    @include section(150, 88);
+    @include section(150, 60);
   }
-
   &::after {
     content: "";
     position: absolute;
@@ -26,6 +154,7 @@
       background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
     }
   }
+  color: var(--text-primary);
 }
 
 .about__img-wrapp {
@@ -33,37 +162,6 @@
   width: 280px;
   height: 280px;
   margin-bottom: 60px;
-
-  @include tablet {
-    top: 150px;
-  }
-}
-.about__bg-apples {
-  position: absolute;
-  top: 15px;
-  left: 312px;
-
-  display: flex;
-  gap: 44px;
-  align-items: flex-end;
-}
-.about__bg-apple--middle {
-  background-image: url("../images/fruits/tablet-bg-middle-apple-1x.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  width: 166px;
-  height: 211px;
-}
-.about__bg-apple--smalll {
-  background-image: url("../images/fruits/tablet-bg-small-apple-1x.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  width: 108px;
-  height: 136px;
 }
 .about__image {
   position: absolute;
@@ -71,9 +169,6 @@
   left: 0;
   bottom: 0;
   height: 309px;
-}
-.about__content-wrapp {
-  margin-top: 204px;
 }
 .about__title {
   font-size: 28px;
