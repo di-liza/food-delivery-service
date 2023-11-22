@@ -24,11 +24,6 @@
 
     @include tablet {
       background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
-      width: 100vw;
-      height: 100vh;
-    }
-    @include tablet {
-      background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
     }
   }
 }
