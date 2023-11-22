@@ -1,15 +1,26 @@
 .favorites {
   @include section();
   text-align: center;
+  @include tablet {
+    @include section(100, 100);
+  }
 }
 .favorites__title {
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
+
+  @include tablet {
+    font-size: 42px;
+  }
 }
 .favorites__description {
   margin-bottom: 60px;
   font-size: 14px;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 .favorites__list--mobile {
   display: flex;
@@ -24,6 +35,9 @@
   display: none;
   @include tablet {
     display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .favorites__item {
@@ -39,6 +53,21 @@
   justify-content: center;
 
   overflow: hidden;
+
+  @include tablet {
+    border-radius: 140px;
+    width: 280px;
+    height: 282px;
+    width: 336px;
+    height: 338px;
+    border-radius: 168px;
+  }
+
+  @include tablet {
+    padding: 34px;
+  }
 }
 .favorites__image {
+  width: 268px;
+  height: 268px;
 }
