@@ -2,6 +2,10 @@
   @include section(0, 60);
 
   font-size: 14px;
+
+  @include tablet {
+    @include section(82, 100);
+  }
 }
 .subscribe__image {
   margin: 0 auto;
@@ -12,13 +16,31 @@
   font-size: 28px;
   font-weight: 700;
   line-height: 33px;
+  @include tablet {
+    width: 656px;
+    font-size: 42px;
+    line-height: 50px;
+  }
 }
 .subscribe__description {
   margin-bottom: 40px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
 }
 .subscribe__form {
   //   display: flex;
   //   flex-direction: column;
   //   align-items: flex-end;
   text-align: right;
+
+  @include tablet {
+    width: 520px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+  }
 }
