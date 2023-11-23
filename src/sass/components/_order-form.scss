@@ -1,9 +1,16 @@
 .order-form {
   width: 280px;
   color: var(--text-primary);
+  @include tablet {
+    width: 394px;
+  }
 }
 .order-form__title {
   margin-bottom: 20px;
+  @include tablet {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 .order-form__list {
   margin-bottom: 32px;
