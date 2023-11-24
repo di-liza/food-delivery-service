@@ -12,7 +12,7 @@
       </button>
 
       <div class="slider">
-        <button type="button" class="slider-btn slider-btn--left">
+        <button type="button" class="slider-btn slider-btn--prev">
           <svg class="icon icon-arrow" width="28" height="20">
             <use href="./icons/sprite.svg#icon-arrow"></use>
           </svg>
@@ -42,8 +42,58 @@
               alt=""
             />
           </picture>
+
+          <picture>
+            <source
+              media="(min-width: 767px)"
+              srcset="
+                ./images/meals/pngwing-tablet-1x.jpg 1x,
+                ./images/meals/pngwing-tablet-2x.jpg 2x
+              "
+            />
+
+            <source
+              media="(min-width: 1280px)"
+              srcset="
+                ./images/meals/pngwing-desktop-1x.jpg 1x,
+                ./images/meals/pngwing-desktop-2x.jpg 2x
+              "
+            />
+            <img
+              class="favorites__image"
+              width="292"
+              height="292"
+              src="./images/meals/pngwing-tablet-1x.jpg"
+              alt=""
+            />
+          </picture>
+
+          <picture>
+            <source
+              media="(min-width: 767px)"
+              srcset="
+                ./images/meals/chris-ralston-tablet-1x.jpg 1x,
+                ./images/meals/chris-ralston-tablet-2x.jpg 2x
+              "
+            />
+
+            <source
+              media="(min-width: 1280px)"
+              srcset="
+                ./images/meals/chris-ralston-desktop-1x.jpg 1x,
+                ./images/meals/chris-ralston-desktop-2x.jpg 2x
+              "
+            />
+            <img
+              class="favorites__image"
+              width="292"
+              height="292"
+              src="./images/meals/chris-ralston-tablet-1x.jpg"
+              alt=""
+            />
+          </picture>
         </div>
-        <button type="button" class="slider-btn slider-btn--right">
+        <button type="button" class="slider-btn slider-btn--next">
           <svg class="icon icon-arrow" width="28" height="20">
             <use href="./icons/sprite.svg#icon-arrow"></use>
           </svg>
