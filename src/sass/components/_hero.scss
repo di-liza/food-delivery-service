@@ -36,6 +36,7 @@
 .slider {
   display: none;
   @include tablet {
+    overflow: hidden;
     display: block;
     width: 320px;
     height: 320px;
@@ -44,6 +45,14 @@
     right: 0;
     z-index: 9;
   }
+}
+.slider-line {
+  position: relative;
+  width: 960px;
+  height: 320px;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
 }
 .slider__image-thumd {
   border-radius: 50%;
