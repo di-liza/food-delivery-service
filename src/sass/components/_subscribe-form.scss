@@ -1,0 +1,21 @@
+.subscribe__form {
+  text-align: right;
+
+  &--footer {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  @include tablet {
+    width: 520px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+
+    &--footer {
+      width: 395px;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+  }
+}
