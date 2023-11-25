@@ -8,6 +8,10 @@
   z-index: 100;
   color: var(--text-secondary);
   line-height: 150%; /* 19.5px */
+
+  @include tablet {
+    font-size: 14px;
+  }
 }
 .header__nav {
   display: flex;

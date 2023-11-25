@@ -5,6 +5,10 @@
     @include section(132px, 0);
     height: 541px;
   }
+  @include desktop {
+    @include section(231px, 0);
+    height: 594px;
+  }
 }
 .hero__content-wrap {
   position: relative;
@@ -19,6 +23,12 @@
     font-size: 42px;
     line-height: 50px;
   }
+
+  @include desktop {
+    width: 502px;
+    font-size: 48px;
+    line-height: 57px;
+  }
 }
 .hero__description {
   margin-bottom: 32px;
@@ -31,6 +41,10 @@
     line-height: 24px;
     margin-bottom: 40px;
   }
+
+  @include desktop {
+    width: 511px;
+  }
 }
 .slider-wrap {
   position: absolute;
@@ -38,13 +52,17 @@
   right: 0;
   z-index: 9;
   width: 336px;
+
+  @include desktop {
+    width: 608px;
+  }
 }
 .slider {
   display: none;
   @include tablet {
     overflow: hidden;
     display: block;
-    width: 320px;
+    width: 580px;
     height: 320px;
     // position: absolute;
     // top: 89px;
