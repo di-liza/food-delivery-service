@@ -1,7 +1,9 @@
 .testimonials {
   @include section(60, 60);
   font-size: 14px;
-
+  @include tablet {
+    @include section(60, 120);
+  }
   position: relative;
   &::after {
     content: "";
@@ -16,6 +18,10 @@
     z-index: -1;
     top: 0;
     left: 0;
+
+    @include tablet {
+      background-image: url("../images/backgrounds/services-background-tablet-1x.png");
+    }
   }
 }
 
