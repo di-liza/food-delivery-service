@@ -10,6 +10,13 @@
 .subscribe__image {
   margin: 0 auto;
   display: block;
+
+  @include tablet {
+    margin-left: auto;
+    margin-right: 0;
+    width: 281px;
+    height: 136px;
+  }
 }
 .subscribe__title {
   margin-bottom: 20px;
