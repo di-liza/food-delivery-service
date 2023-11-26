@@ -6,6 +6,9 @@
   @include tablet {
     @include section(82, 100);
   }
+  @include desktop {
+    @include section(0, 64);
+  }
 }
 .subscribe__image {
   margin: 0 auto;
@@ -16,6 +19,13 @@
     margin-right: 0;
     width: 281px;
     height: 136px;
+  }
+  @include desktop {
+    width: 608px;
+    height: 266px;
+    position: relative;
+    top: -70px;
+    right: -38px;
   }
 }
 .subscribe__title {
@@ -37,4 +47,12 @@
     line-height: 24px;
     margin-bottom: 24px;
   }
+}
+
+.subscribe_desk-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.subscribe_desk-content {
+  width: 608px;
 }

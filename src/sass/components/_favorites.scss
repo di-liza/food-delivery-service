@@ -39,12 +39,15 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  @include desktop {
+    width: 1249px;
+  }
 }
-.favorites__item {
+
+.favorites__btn {
   width: 280px;
   height: 282px;
-
-  border-radius: 140px;
+  border-radius: 50%;
   border: 11px solid var(--main-yellow);
   background: var(--background-primary);
 
@@ -55,19 +58,24 @@
   overflow: hidden;
 
   @include tablet {
-    border-radius: 140px;
-    width: 280px;
-    height: 282px;
     width: 336px;
     height: 338px;
-    border-radius: 168px;
   }
 
-  @include tablet {
-    padding: 34px;
+  @include desktop {
+    width: 395px;
+    height: 397px;
   }
 }
 .favorites__image {
-  width: 268px;
-  height: 268px;
+  width: 223px;
+  height: 223px;
+  @include tablet {
+    width: 268px;
+    height: 268px;
+  }
+  @include desktop {
+    width: 315px;
+    height: 315px;
+  }
 }

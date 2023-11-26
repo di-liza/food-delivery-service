@@ -4,6 +4,9 @@
   @include tablet {
     @include section(60, 120);
   }
+  @include tablet {
+    @include section(100, 200);
+  }
   position: relative;
   &::after {
     content: "";
