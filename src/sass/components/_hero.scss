@@ -55,6 +55,7 @@
 
   @include desktop {
     width: 608px;
+    top: 0;
   }
 }
 .slider {
@@ -62,12 +63,16 @@
   @include tablet {
     overflow: hidden;
     display: block;
-    width: 580px;
+    width: 320px;
     height: 320px;
     // position: absolute;
     // top: 89px;
     // right: 0;
     // z-index: 9;
+  }
+  @include desktop {
+    width: 580px;
+    height: 580px;
   }
 }
 .slider-line {
@@ -78,6 +83,10 @@
   left: 0;
   transition: all 1s ease-in-out;
   overflow: hidden;
+  @include desktop {
+    width: 1740px;
+    height: 580px;
+  }
 }
 .slider__image-thumd {
   border-radius: 50%;
@@ -91,6 +100,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include desktop {
+    width: 580px;
+    height: 580px;
+  }
 }
 .slider-btn {
   position: absolute;
@@ -117,7 +131,26 @@
     right: 3px;
     transform: rotate(180deg);
   }
+
+  @include desktop {
+    &--next {
+      right: 10px;
+    }
+    top: 266px;
+    width: 48px;
+    height: 40px;
+  }
 }
 .icon-arrow {
   fill: currentColor;
+  @include desktop {
+    width: 30px;
+    height: 30px;
+  }
+}
+.hero__image {
+  @include desktop {
+    width: 528px;
+    height: 528px;
+  }
 }
