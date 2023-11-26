@@ -8,10 +8,13 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../images/backgrounds/services-background-mobile-320-1x.jpg");
+    background-image: url("../images/backgrounds/testimonials-background-mobile-320-1x.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @include retina {
+      background-image: url("../images/backgrounds/testimonials-background-mobile-320-2x.jpg");
+    }
 
     height: 100%;
     width: 100%;
@@ -19,8 +22,24 @@
     top: 0;
     left: 0;
 
+    @include mobile {
+      background-image: url("../images/backgrounds/testimonials-background-mobile-480-1x.jpg");
+      @include retina {
+        background-image: url("../images/backgrounds/testimonials-background-mobile-480-2x.jpg");
+      }
+    }
     @include tablet {
-      background-image: url("../images/backgrounds/services-background-tablet-1x.png");
+      background-image: url("../images/backgrounds/testimonials-background-tablet-1x.jpg");
+      @include retina {
+        background-image: url("../images/backgrounds/testimonials-background-tablet-2x.jpg");
+      }
+    }
+    @include desktop {
+      background-image: url("../images/backgrounds/testimonials-background-desktop-2x.jpg");
+
+      @include retina {
+        background-image: url("../images/backgrounds/testimonials-background-desktop-2x.jpg");
+      }
     }
   }
 }
