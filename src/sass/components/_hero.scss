@@ -6,8 +6,8 @@
     height: 541px;
   }
   @include desktop {
-    @include section(231px, 0);
-    height: 594px;
+    @include section(86px, 0);
+    height: 710px;
   }
 }
 .hero__content-wrap {
@@ -28,6 +28,7 @@
     width: 502px;
     font-size: 48px;
     line-height: 57px;
+    padding-top: 159px;
   }
 }
 .hero__description {
