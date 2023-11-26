@@ -12,15 +12,30 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @include retina {
+      background-image: url("../images/backgrounds/about-background-mobile-320-2x.jpg");
+    }
+
     height: 100%;
     width: 100%;
     z-index: -1;
     top: 0;
     left: 0;
 
+    @include mobile {
+      top: 36px;
+      background-image: url("../images/backgrounds/about-background-mobile-480-1x.jpg");
+      @include retina {
+        background-image: url("../images/backgrounds/about-background-mobile-480-2x.jpg");
+      }
+    }
+
     @include tablet {
       top: 36px;
       background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
+      @include retina {
+        background-image: url("../images/backgrounds/about-background-tablet-2x.jpg");
+      }
     }
   }
   color: var(--text-primary);
@@ -51,32 +66,32 @@
 }
 
 .about__bg-apple--middle {
-  // position: absolute;
-  // bottom: 68px;
-  // right: 184px;
   width: 166px;
   height: 211px;
   background-image: url("../images/fruits/tablet-bg-middle-apple-1x.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url("../images/fruits/tablet-bg-middle-apple-2x.png");
+  }
 }
 .about__bg-apple--smalll {
-  // position: absolute;
-  // bottom: 68px;
-  // right: 32px;
   width: 108px;
   height: 136px;
   background-image: url("../images/fruits/tablet-bg-small-apple-1x.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @include retina {
+    background-image: url("../images/fruits/tablet-bg-small-apple-2x.png");
+  }
 }
 .about__title {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 28px;
-  width: 280px;
 
   @include tablet {
     font-size: 42px;
@@ -88,7 +103,6 @@
   margin-bottom: 28px;
   line-height: 20px;
   font-size: 14px;
-  width: 280px;
 
   @include tablet {
     width: 500px;
@@ -107,14 +121,6 @@
     gap: 80px;
     margin-bottom: 20px;
   }
-}
-.about__item {
-  // &:not(:last-child) {
-  //   margin-bottom: 28px;
-  // }
-  // &:last-child {
-  //   margin-bottom: 28px;
-  // }
 }
 
 .about__item-icon {
