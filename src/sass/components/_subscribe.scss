@@ -11,12 +11,13 @@
   }
 }
 .subscribe__image {
-  margin: 0 auto;
+  margin: 0 auto 17px auto;
   display: block;
 
   @include tablet {
     margin-left: auto;
     margin-right: 0;
+    margin-bottom: 0;
     width: 281px;
     height: 136px;
   }
@@ -50,9 +51,13 @@
 }
 
 .subscribe_desk-wrap {
-  display: flex;
-  flex-direction: row-reverse;
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 .subscribe_desk-content {
-  width: 608px;
+  @include tablet {
+    width: 608px;
+  }
 }

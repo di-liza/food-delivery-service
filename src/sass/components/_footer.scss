@@ -93,10 +93,17 @@
 }
 .footer__nav {
   margin-bottom: 40px;
-  position: relative;
+  // position: relative;
 
-  @include tablet {
-    display: flex;
+  display: flex;
+  justify-content: space-around;
+
+  // @include tablet {
+  // }
+  @include desktop {
+    width: 533px;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .footer__content {
@@ -171,6 +178,9 @@
     font-size: 12px;
     margin-bottom: 100px;
   }
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 .footer__subscribe-link {
   color: var(--dark-green);
@@ -202,5 +212,14 @@
   @include tablet {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.footer__nav-form-box {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
   }
 }
