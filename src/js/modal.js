@@ -6,10 +6,17 @@ const handleOpenModal = () => {
   backdrop.classList.add("openModal");
   document.body.style.overflow = "hidden";
 };
-const handleCloseModal = ({ code }) => {
-  backdrop.classList.remove("openModal");
-  document.body.style.overflow = "scroll";
-  code === "Escape" && backdrop.classList.remove("openModal");
+const handleCloseModal = ({ target, currentTarget, code }) => {
+  const closeBtnEl = target.closest("#close-modal");
+
+  if (
+    target === currentTarget ||
+    code === "Escape" ||
+    currentTarget.contains(closeBtnEl)
+  ) {
+    backdrop.classList.remove("openModal");
+    document.body.style.overflow = "scroll";
+  }
 };
 
 orderBtn.forEach((btn) => btn.addEventListener("click", handleOpenModal));
