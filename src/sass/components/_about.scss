@@ -4,6 +4,9 @@
   @include tablet {
     @include section(150, 88);
   }
+  @include desktop {
+    @include section(231, 43);
+  }
   &::after {
     content: "";
     position: absolute;
@@ -31,14 +34,14 @@
     }
 
     @include tablet {
-      top: 36px;
+      top: 0;
       background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
       @include retina {
         background-image: url("../images/backgrounds/about-background-tablet-2x.jpg");
       }
     }
     @include desktop {
-      top: 36px;
+      top: 0;
       background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
       @include retina {
         background-image: url("../images/backgrounds/about-background-desktop-2x.jpg");
@@ -56,9 +59,18 @@
   margin-bottom: 60px;
   align-items: center;
   gap: 29px;
+
+  // @include desktop {
+  //   width: 550px;
+  //   height: 550px;
+  // }
 }
 .about__image {
   height: 309px;
+  @include desktop {
+    width: 550px;
+    height: 585px;
+  }
 }
 .about__bg-app {
   display: none;
@@ -116,6 +128,9 @@
     font-size: 16px;
     line-height: 24px;
   }
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
 .about__list {
   display: flex;
@@ -127,6 +142,9 @@
 
     gap: 80px;
     margin-bottom: 20px;
+  }
+  @include tablet {
+    margin-bottom: 32px;
   }
 }
 
@@ -163,4 +181,14 @@
   color: var(--text-secondary);
   font-size: 13px;
   font-weight: 400;
+
+  @include desktop {
+    display: none;
+  }
+}
+.about-content-box {
+  @include desktop {
+    display: flex;
+    gap: 90px;
+  }
 }

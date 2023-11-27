@@ -21,7 +21,8 @@
     border: 2px solid var(--dark-green);
     background-color: var(--background-primary);
     &:hover {
-      border: var(--hover-yellow);
+      background-color: var(--light-green);
+      border-color: var(--light-green);
     }
   }
 }
@@ -36,10 +37,10 @@
     }
   }
   &--transparent {
-    border: 1px solid var(--dark-green);
+    border: 2px solid var(--dark-green);
     background-color: var(--background-primary);
     &:hover {
-      border: var(--hover-yellow);
+      border-color: var(--hover-yellow);
     }
   }
 }

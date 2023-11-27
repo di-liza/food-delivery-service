@@ -57,6 +57,12 @@
 
   overflow: hidden;
 
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--light-green);
+  }
+
   @include tablet {
     width: 336px;
     height: 338px;
