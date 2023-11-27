@@ -77,6 +77,10 @@
   background-color: var(--background-primary);
   border-radius: 0 25px 25px 25px;
   padding: 8px 8px 10px 8px;
+
+  @include desktop {
+    padding: 14px 14px 16px 14px;
+  }
 }
 .testimonials__stars {
   margin-bottom: 28px;

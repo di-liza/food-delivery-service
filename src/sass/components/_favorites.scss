@@ -6,12 +6,14 @@
   }
 }
 .favorites__title {
-  margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
+  width: 280px;
+  margin: 0 auto 20px auto;
 
   @include tablet {
     font-size: 42px;
+    width: 100%;
   }
 }
 .favorites__description {
