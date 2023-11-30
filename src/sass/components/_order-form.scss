@@ -53,3 +53,25 @@
     border: 2px solid var(--error-form);
   }
 }
+
+.order-form__error-message {
+  color: var(--error-form);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 15px;
+  display: flex;
+  gap: 2px;
+  align-items: stretch;
+  justify-content: start;
+  margin-left: 12px;
+  margin-top: 1px;
+}
+
+.error__message-pop-up {
+  background-color: var(--error-form);
+
+  color: #faedeb;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}

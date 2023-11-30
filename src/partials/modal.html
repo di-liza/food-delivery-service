@@ -15,6 +15,16 @@
             type="text"
             placeholder="Your name"
           />
+          <p class="order-form__error-message">
+            <img
+              class="order-form__error-icon"
+              width="12"
+              height="12"
+              src="./icons/error-icon-1x.png"
+              alt=""
+            />
+            <span> The name must be between 3 and 25 characters </span>
+          </p>
         </li>
         <li class="order-form__item">
           <label class="order-form__label" for="phone">Phone:</label>
@@ -24,18 +34,40 @@
             type="number"
             placeholder="+38(0_ _) _ _ _   _ _   _ _"
           />
+          <p class="order-form__error-message">
+            <img
+              class="order-form__error-icon"
+              width="12"
+              height="12"
+              src="./icons/error-icon-1x.png"
+              alt=""
+            />
+            <span> This phone must be in the format 099 000 00 00 </span>
+          </p>
         </li>
         <li class="order-form__item">
           <label class="order-form__label" for="mail">Email:</label>
+
           <input
             class="input input--form"
             name="mail"
             type="email"
             placeholder="example@gmail.com"
           />
+          <p class="order-form__error-message">
+            <img
+              class="order-form__error-icon"
+              width="12"
+              height="12"
+              src="./icons/error-icon-1x.png"
+              alt=""
+            />
+            <span> Please enter a valid email address </span>
+          </p>
         </li>
       </ul>
       <button class="order-form__submit" type="submit">Send</button>
+      <p class="error__message-pop-up">All fields are required</p>
     </form>
   </div>
 </div>
