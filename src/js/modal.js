@@ -12,7 +12,7 @@ const handleCloseModal = ({ target, currentTarget, code }) => {
   if (
     target === currentTarget ||
     code === "Escape" ||
-    currentTarget.contains(closeBtnEl)
+    currentTarget === closeBtnEl
   ) {
     backdrop.classList.remove("openModal");
     document.body.style.overflow = "scroll";
@@ -23,3 +23,8 @@ orderBtn.forEach((btn) => btn.addEventListener("click", handleOpenModal));
 closeModalBtn.addEventListener("click", handleCloseModal);
 backdrop.addEventListener("click", handleCloseModal);
 window.addEventListener("keydown", handleCloseModal);
+
+/**
+ * ||
+    currentTarget.contains(closeBtnEl)
+ */
