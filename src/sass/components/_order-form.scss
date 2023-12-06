@@ -55,11 +55,12 @@
 }
 
 .order-form__error-message {
+  display: none;
   color: var(--error-form);
   font-size: 11px;
   font-weight: 500;
   line-height: 15px;
-  display: flex;
+
   gap: 2px;
   align-items: stretch;
   justify-content: start;
@@ -67,11 +68,20 @@
   margin-top: 1px;
 }
 
+.open {
+  display: flex;
+}
+
 .error__message-pop-up {
+  display: none;
   background-color: var(--error-form);
 
   color: #faedeb;
   text-align: center;
   font-size: 14px;
   font-weight: 500;
+}
+
+.show {
+  display: block;
 }
