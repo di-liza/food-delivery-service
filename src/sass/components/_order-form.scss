@@ -82,6 +82,16 @@
   font-weight: 500;
 }
 
+.succsess-message {
+  display: none;
+  width: 150px;
+  height: 70px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(71, 216, 71);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
 .show {
   display: block;
 }

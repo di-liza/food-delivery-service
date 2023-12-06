@@ -6,6 +6,7 @@ const handleOpenModal = () => {
   backdrop.classList.add("openModal");
   document.body.style.overflow = "hidden";
 };
+
 const handleCloseModal = ({ target, currentTarget, code }) => {
   const closeBtnEl = target.closest("#close-modal");
 
@@ -23,8 +24,3 @@ orderBtn.forEach((btn) => btn.addEventListener("click", handleOpenModal));
 closeModalBtn.addEventListener("click", handleCloseModal);
 backdrop.addEventListener("click", handleCloseModal);
 window.addEventListener("keydown", handleCloseModal);
-
-/**
- * ||
-    currentTarget.contains(closeBtnEl)
- */
