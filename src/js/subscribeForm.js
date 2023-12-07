@@ -1,4 +1,6 @@
-const subscriveFormEl = document.querySelectorAll("#subscribe-form");
+import refs from "./refs.js";
+
+const { subscriveFormEl } = refs;
 
 const handleFormSubmit = (e) => {
   e.preventDefault();

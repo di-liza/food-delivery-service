@@ -1,6 +1,6 @@
-const orderBtn = document.querySelectorAll("#order-btn");
-const backdrop = document.getElementById("backdrop");
-const closeModalBtn = document.getElementById("close-modal");
+import refs from "./refs.js";
+
+const { orderBtn, backdrop, closeModalBtn } = refs;
 
 const handleOpenModal = () => {
   backdrop.classList.add("openModal");

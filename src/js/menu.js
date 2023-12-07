@@ -1,5 +1,6 @@
-const openMenuBTN = document.getElementById("menu-open-btn");
-const closeMenuBTN = document.getElementById("mob-menu-close-btn");
+import refs from "./refs.js";
+
+const { openMenuBTN, closeMenuBTN } = refs;
 
 const menu = document.querySelector(".mob-menu");
 
