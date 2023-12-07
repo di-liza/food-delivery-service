@@ -79,7 +79,17 @@
 
 .error__message-pop-up {
   display: none;
-  background-color: var(--error-form);
+  width: 165px;
+  height: 54px;
+  padding-top: 16px;
+  padding-bottom: 22px;
+  background-image: url("../images/backgrounds/form-error-bg-1x.png");
+  @include retina {
+    background-image: url("../images/backgrounds/form-error-bg-2x.png");
+  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   color: #faedeb;
   text-align: center;
@@ -88,6 +98,14 @@
 
   &--show {
     display: block;
+  }
+
+  position: absolute;
+  bottom: 76px;
+  left: 77px;
+
+  @include tablet {
+    left: 146px;
   }
 }
 
