@@ -51,6 +51,11 @@
 
   &--error {
     border: 2px solid var(--error-form);
+    &:hover,
+    &:focus,
+    &:active {
+      background: var(--background-primary);
+    }
   }
 }
 
