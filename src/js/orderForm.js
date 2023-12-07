@@ -23,7 +23,7 @@ const handleInputEvent = ({ target }) => {
     target.classList.toggle("input--error", !isValid);
     error = !isValid;
   }
-  updateErrorState(target);
+  updateErrorState(error, target);
 };
 
 const handleFormSubmit = (e) => {
@@ -31,21 +31,24 @@ const handleFormSubmit = (e) => {
   const isFormFilled = [...orderFormInputs].every(
     (input) => input.value.trim() !== ""
   );
+  error = !isFormFilled;
 
-  if (!isFormFilled) error = true;
+  orderFormInputs.forEach((input) => {
+    input.classList.toggle("input--error", error);
+  });
 
   errorFormMessage.classList.toggle("error__message-pop-up--show", error);
   submitBtn.classList.toggle("order-form__submit--error", error);
 
-  if (!error && isFormFilled) {
+  if (!error) {
     errorFormMessage.classList.remove("error__message-pop-up--show");
     submitBtn.classList.remove("order-form__submit--error");
     backdrop.classList.remove("openModal");
     document.body.style.overflow = "scroll";
+    console.log(
+      '"Your order details have been successfully submitted. Please await contact from our operator. Have a great day!"'
+    );
     resetForm();
-    // alert(
-    //   "Your order details have been successfully submitted. Please await contact from our operator. Have a great day!"
-    // );
   }
 };
 

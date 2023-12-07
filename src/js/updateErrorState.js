@@ -1,4 +1,11 @@
-const updateErrorState = (input) => {
+import refs from "./refs";
+import regexPatterns from "./regexPatterns";
+
+const { orderFormInputs, submitBtn, errorFormMessage } = refs;
+
+// const inputRef = [...orderFormInputs].map((input) => input);
+
+const updateErrorState = (error, input) => {
   const name = input.name;
   const errorMessages = document.querySelectorAll(
     `[data-error-type="${name}"]`
