@@ -1,68 +1,43 @@
 import refs from "./refs.js";
+import regexPatterns from "./regexPatterns.js";
+import updateErrorState from "./updateErrorState.js";
 
-const {
-  orderFormEl,
-  inputsEl,
-  errorMessagesEl,
-  errorFormMessage,
-  backdrop,
-  submitBtn,
-} = refs;
+const { orderFormEl, orderFormInputs, errorFormMessage, backdrop, submitBtn } =
+  refs;
 
 let error = false;
 
-const regexPatterns = {
-  name: /^[a-zA-Z0-9\s]{2,}$/,
-  mail: /^[a-zA-Z0-9.-_]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/,
-  phone: /^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$/,
-};
-
 const resetForm = () => {
-  inputsEl.forEach((input) => {
+  orderFormInputs.forEach((input) => {
     input.value = "";
   });
 };
 
-const handleInputChange = ({ target }) => {
+const handleInputEvent = ({ target }) => {
   const { value, name } = target;
-  if (value.trim() === "") error = true;
-  errorMessagesEl.forEach((message) => {
-    if (value.trim() === "" && message.id === name) {
-      message.classList.add("order-form__error-message--show");
-      error = true;
-      target.classList.add("input--error");
-    } else if (message.id === name) {
-      const isValid = value.match(regexPatterns[name]);
-      message.classList[isValid ? "remove" : "add"](
-        "order-form__error-message--show"
-      );
-      if (isValid) {
-        error = false;
-        target.classList.remove("input--error");
-      }
-    }
-    if (error) submitBtn.classList.add("order-form__submit--error");
-    else {
-      errorFormMessage.classList.remove("error__message-pop-up--show");
-      submitBtn.classList.remove("order-form__submit--error");
-    }
-  });
+  if (value.trim() === "") {
+    error = true;
+    target.classList.add("input--error");
+  } else {
+    const isValid = value.match(regexPatterns[name]);
+    target.classList.toggle("input--error", !isValid);
+    error = !isValid;
+  }
+  updateErrorState(target);
 };
-inputsEl.forEach((i) => i.addEventListener("input", handleInputChange));
-inputsEl.forEach((i) => i.addEventListener("blur", handleInputChange));
 
 const handleFormSubmit = (e) => {
   e.preventDefault();
-  const isInputlsFiled = [...inputsEl].every(
+  const isFormFilled = [...orderFormInputs].every(
     (input) => input.value.trim() !== ""
   );
-  if (!isInputlsFiled) error = true;
-  console.log("isInputlsFiled", isInputlsFiled);
-  console.log("error", error);
-  if (error && !isInputlsFiled) {
-    errorFormMessage.classList.add("error__message-pop-up--show");
-    submitBtn.classList.add("order-form__submit--error");
-  } else if (!error || isInputlsFiled) {
+
+  if (!isFormFilled) error = true;
+
+  errorFormMessage.classList.toggle("error__message-pop-up--show", error);
+  submitBtn.classList.toggle("order-form__submit--error", error);
+
+  if (!error && isFormFilled) {
     errorFormMessage.classList.remove("error__message-pop-up--show");
     submitBtn.classList.remove("order-form__submit--error");
     backdrop.classList.remove("openModal");
@@ -75,3 +50,7 @@ const handleFormSubmit = (e) => {
 };
 
 orderFormEl.addEventListener("submit", handleFormSubmit);
+orderFormInputs.forEach((input) => {
+  input.addEventListener("input", handleInputEvent);
+  input.addEventListener("blur", handleInputEvent);
+});

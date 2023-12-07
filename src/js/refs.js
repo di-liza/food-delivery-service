@@ -3,8 +3,8 @@ const refs = {
   closeMenuBTN: document.getElementById("mob-menu-close-btn"),
 
   orderFormEl: document.getElementById("order-form"),
-  inputsEl: document.querySelectorAll("#order-form-input"),
-  errorMessagesEl: document.querySelectorAll(".order-form__error-message"),
+  orderFormInputs: document.querySelectorAll("#order-form-input"),
+
   errorFormMessage: document.querySelector(".error__message-pop-up"),
   backdrop: document.getElementById("backdrop"),
   submitBtn: document.getElementById("order-submit-btn"),
