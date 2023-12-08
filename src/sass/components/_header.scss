@@ -32,8 +32,13 @@
 .header__menu-open-icon {
   transition: all 0.2s var(--cubic);
   &:hover,
-  :active {
+  :focus {
     fill: var(--dark-green);
+  }
+  :active,
+  :focus-visible,
+  :focus {
+    fill: var(--main-yellow);
   }
 }
 .header__menu {
