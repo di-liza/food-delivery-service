@@ -30,6 +30,7 @@
   }
 }
 .header__menu-open-icon {
+  transition: all 0.2s var(--cubic);
   &:hover,
   :active {
     fill: var(--dark-green);
@@ -52,6 +53,8 @@
 
 .header__menu-link {
   font-size: 14px;
+  transition: all 0.2s var(--cubic);
+
   &:hover,
   :active,
   :focus {

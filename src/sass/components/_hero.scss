@@ -136,6 +136,7 @@
     width: 48px;
     height: 40px;
   }
+  transition: all 0.2s var(--cubic);
 
   &:hover,
   &:focus {

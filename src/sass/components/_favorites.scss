@@ -59,10 +59,12 @@
 
   overflow: hidden;
 
+  transition: all 0.2s var(--cubic);
   &:hover,
   &:focus,
   &:active {
     border-color: var(--light-green);
+    transform: scale(1.1);
   }
 
   @include tablet {

@@ -1,4 +1,6 @@
 .button {
+  transition: all 0.2s var(--cubic);
+
   color: var(--text-primary);
   font-size: 13px;
   font-weight: 500;
@@ -9,20 +11,28 @@
   @include tablet {
     display: inline-block;
   }
+
   &--solid {
     padding: 6px 18px;
     background-color: var(--light-green);
+    position: relative;
+
     &:hover {
       background-color: var(--hover-yellow);
+      animation: var(--pulse-animation);
     }
   }
+
   &--transparent {
     padding: 10px 22px;
     border: 2px solid var(--dark-green);
     background-color: var(--background-primary);
+    position: relative;
+
     &:hover {
       background-color: var(--light-green);
       border-color: var(--light-green);
+      animation: var(--pulse-animation);
     }
   }
 }

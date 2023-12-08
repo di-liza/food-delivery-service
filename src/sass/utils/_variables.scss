@@ -16,4 +16,21 @@
   --error: #fe6060;
   --error-form: #ff705d;
   --backdrop: #5e6363b2;
+
+  --cubic: cubic-bezier(0, 0.27, 1, 1);
+  --pulse-animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
