@@ -20,6 +20,7 @@ const handleCloseModal = ({ target, currentTarget, code }) => {
   }
 };
 
+console.log("orderBtn:", orderBtn);
 orderBtn.forEach((btn) => btn.addEventListener("click", handleOpenModal));
 closeModalBtn.addEventListener("click", handleCloseModal);
 backdrop.addEventListener("click", handleCloseModal);

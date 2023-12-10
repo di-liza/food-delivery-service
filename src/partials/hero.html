@@ -7,12 +7,18 @@
         straight to your doorstep, no matter where you are. Order now and enjoy
         a hassle-free and delicious meal from the comfort of your own home.
       </p>
-      <button class="button order-btn--solid" id="order-btn" type="button">
+      <button
+        class="button order-btn--solid"
+        id="order-btn"
+        type="button"
+        aria-label="Order Now"
+      >
         Order Now
       </button>
       <div class="slider-wrap">
         <div class="slider">
           <button
+            aria-label="Previous Slide"
             type="button"
             class="slider-btn slider-btn--prev"
             id="prev-btn"
@@ -27,11 +33,27 @@
                 <source
                   media="(max-width:1279px)"
                   srcset="
+                    ./images/meals/avif/falafel-tablet-1x.avif 1x,
+                    ./images/meals/avif/falafel-tablet-2x.avif 2x
+                  "
+                  type="image/avif"
+                />
+                <source
+                  media="(max-width:1279px)"
+                  srcset="
                     ./images/meals/falafel-tablet-1x.jpg 1x,
                     ./images/meals/falafel-tablet-2x.jpg 2x
                   "
                 />
 
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/meals/avif/falafel-desktop-1x.avif 1x,
+                    ./images/meals/avif/falafel-desktop-2x.avif 2x
+                  "
+                  type="image/avif"
+                />
                 <source
                   media="(min-width: 1280px)"
                   srcset="
@@ -55,11 +77,25 @@
                 <source
                   media="(max-width:1279px)"
                   srcset="
+                    ./images/meals/avif/pngwing-tablet-1x.avif 1x,
+                    ./images/meals/avif/pngwing-tablet-2x.avif 2x
+                  "
+                />
+                <source
+                  media="(max-width:1279px)"
+                  srcset="
                     ./images/meals/pngwing-tablet-1x.jpg 1x,
                     ./images/meals/pngwing-tablet-2x.jpg 2x
                   "
                 />
 
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/meals/avif/pngwing-desktop-1x.avif 1x,
+                    ./images/meals/avif/pngwing-desktop-2x.avif 2x
+                  "
+                />
                 <source
                   media="(min-width: 1280px)"
                   srcset="
@@ -83,11 +119,25 @@
                 <source
                   media="(max-width:1279px)"
                   srcset="
+                    ./images/meals/avif/chris-ralston-tablet-1x.avif 1x,
+                    ./images/meals/avif/chris-ralston-tablet-2x.avif 2x
+                  "
+                />
+                <source
+                  media="(max-width:1279px)"
+                  srcset="
                     ./images/meals/chris-ralston-tablet-1x.jpg 1x,
                     ./images/meals/chris-ralston-tablet-2x.jpg 2x
                   "
                 />
 
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/meals/avif/chris-ralston-desktop-1x.avif 1x,
+                    ./images/meals/avif/chris-ralston-desktop-2x.avif 2x
+                  "
+                />
                 <source
                   media="(min-width: 1280px)"
                   srcset="
@@ -110,6 +160,7 @@
             type="button"
             class="slider-btn slider-btn--next"
             id="next-btn"
+            aria-label="Next Slide"
           >
             <svg class="icon icon-arrow" width="28" height="20">
               <use href="./icons/sprite.svg#icon-arrow"></use>
