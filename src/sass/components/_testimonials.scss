@@ -1,6 +1,9 @@
 .testimonials {
   @include section(60, 60);
   font-size: 14px;
+  @include mobile {
+    @include section(_, 124);
+  }
   @include tablet {
     @include section(60, 120);
   }
@@ -13,8 +16,8 @@
     position: absolute;
     background-image: url("../images/backgrounds/testimonials-background-mobile-320-1x.jpg");
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    // background-position: center;
+    // background-repeat: no-repeat;
     @include retina {
       background-image: url("../images/backgrounds/testimonials-background-mobile-320-2x.jpg");
     }

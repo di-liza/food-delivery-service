@@ -1,4 +1,5 @@
 <section class="about" id="about">
+  <!-- <img src="./images/fruits/avif/apple-mobile-1x.avif" alt="" /> -->
   <div class="container">
     <div class="about-content-box">
       <div class="about__img-wrapp">
@@ -7,9 +8,26 @@
           <source
             media="(max-width: 767px)"
             srcset="
+              ./images/fruits/avif/apple-mobile-1x.avif 1x,
+              ./images/fruits/avif/apple-mobile-2x.avif 2x
+            "
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
               ./images/fruits/apple-mobile-1x.png 1x,
               ./images/fruits/apple-mobile-2x.png 2x
             "
+          />
+
+          <source
+            media="(max-width: 1279px)"
+            srcset="
+              ./images/fruits/avif/apple-tablet-1x.avif 1x,
+              ./images/fruits/avif/apple-tablet-2x.avif 2x
+            "
+            type="image/avif"
           />
           <source
             media="(max-width: 1279px)"
@@ -18,12 +36,25 @@
               ./images/fruits/apple-tablet-2x.png 2x
             "
           />
+
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ./images/fruits/avif/apple-desktop-1x.avif 1x,
+              ./images/fruits/avif/apple-desktop-2x.avif 2x
+            "
+            type="image/avif"
+          />
           <source
             media="(min-width: 1280px)"
             srcset="
               ./images/fruits/apple-desktop-1x.png 1x,
               ./images/fruits/apple-desktop-2x.png 2x
             "
+          />
+          <source
+            type="image/avif"
+            srcset="./images/fruits/avif/apple-mobile-1x.avif"
           />
           <img
             src="./images/fruits/apple-mobile-1x.png"

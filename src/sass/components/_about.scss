@@ -12,8 +12,8 @@
     position: absolute;
     background-image: url("../images/backgrounds/about-background-mobile-320-1x.jpg");
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    // background-position: center;
+    // background-repeat: no-repeat;
 
     @include retina {
       background-image: url("../images/backgrounds/about-background-mobile-320-2x.jpg");
@@ -26,7 +26,7 @@
     left: 0;
 
     @include mobile {
-      top: 36px;
+      // top: 36px;
       background-image: url("../images/backgrounds/about-background-mobile-480-1x.jpg");
       @include retina {
         background-image: url("../images/backgrounds/about-background-mobile-480-2x.jpg");
