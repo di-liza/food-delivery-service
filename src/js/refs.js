@@ -9,6 +9,14 @@ const refs = {
   backdrop: document.getElementById("backdrop"),
   submitBtn: document.getElementById("order-submit-btn"),
 
+  validErrorMessage: function (message) {
+    return message.querySelector(".order-form__error-message-validation");
+  },
+
+  isEmptyErrorMessage: function (message) {
+    return message.querySelector(".order-form__error-message-empty");
+  },
+
   orderBtn: document.querySelectorAll("#order-btn"),
   backdrop: document.getElementById("backdrop"),
   closeModalBtn: document.getElementById("close-modal"),

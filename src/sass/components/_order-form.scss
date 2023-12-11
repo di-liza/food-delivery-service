@@ -77,6 +77,18 @@
     display: flex;
   }
 }
+.order-form__error-message-validation {
+  display: none;
+  &--show {
+    display: block;
+  }
+}
+.order-form__error-message-empty {
+  display: none;
+  &--show {
+    display: block;
+  }
+}
 
 .error__message-pop-up {
   display: none;

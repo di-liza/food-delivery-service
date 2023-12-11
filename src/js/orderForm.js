@@ -1,5 +1,4 @@
 import refs from "./refs.js";
-import regexPatterns from "./regexPatterns.js";
 import updateErrorState from "./updateErrorState.js";
 
 const { orderFormEl, orderFormInputs, errorFormMessage, backdrop, submitBtn } =
@@ -14,31 +13,26 @@ const resetForm = () => {
 };
 
 const handleInputEvent = ({ target }) => {
-  const { value, name } = target;
-  if (value.trim() === "") {
-    error = true;
-    target.classList.add("input--error");
-  } else {
-    const isValid = value.match(regexPatterns[name]);
-    target.classList.toggle("input--error", !isValid);
-    error = !isValid;
-  }
+  errorFormMessage.classList.remove("error__message-pop-up--show", error);
+  const { value } = target;
+  !!value.trim() ? (error = true) : (error = false);
   updateErrorState(error, target);
 };
 
 const handleFormSubmit = (e) => {
   e.preventDefault();
-  const isFormFilled = [...orderFormInputs].every(
+  const isInputsFill = [...orderFormInputs].every(
     (input) => input.value.trim() !== ""
   );
-  error = !isFormFilled;
-
-  orderFormInputs.forEach((input) => {
-    input.classList.toggle("input--error", error);
-  });
+  error = !isInputsFill;
 
   errorFormMessage.classList.toggle("error__message-pop-up--show", error);
   submitBtn.classList.toggle("order-form__submit--error", error);
+
+  orderFormInputs.forEach((input) => {
+    input.classList.toggle("input--error", error);
+    updateErrorState(error, input, true);
+  });
 
   if (!error) {
     errorFormMessage.classList.remove("error__message-pop-up--show");
