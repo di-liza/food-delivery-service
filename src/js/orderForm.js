@@ -6,17 +6,16 @@ const { orderFormEl, orderFormInputs, errorFormMessage, backdrop, submitBtn } =
 
 let error = false;
 
+const handleInputEvent = ({ target }) => {
+  errorFormMessage.classList.remove("error__message-pop-up--show");
+  !!target.value.trim() ? (error = true) : (error = false);
+  updateErrorState(target);
+};
+
 const resetForm = () => {
   orderFormInputs.forEach((input) => {
     input.value = "";
   });
-};
-
-const handleInputEvent = ({ target }) => {
-  errorFormMessage.classList.remove("error__message-pop-up--show", error);
-  const { value } = target;
-  !!value.trim() ? (error = true) : (error = false);
-  updateErrorState(error, target);
 };
 
 const handleFormSubmit = (e) => {
@@ -31,7 +30,7 @@ const handleFormSubmit = (e) => {
 
   orderFormInputs.forEach((input) => {
     input.classList.toggle("input--error", error);
-    updateErrorState(error, input, true);
+    updateErrorState(input, true);
   });
 
   if (!error) {

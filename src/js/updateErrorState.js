@@ -1,37 +1,35 @@
 import refs from "./refs";
 import regexPatterns from "./regexPatterns";
 
-const { submitBtn, validErrorMessage, isEmptyErrorMessage } = refs;
+const { submitBtn, inputFormatErrorMessage, requiredFieldErrorMessage } = refs;
 
-const updateErrorState = (error, input, submit = false) => {
+const updateErrorState = (input, submit = false) => {
   const name = input.name;
   const errorMessages = document.querySelectorAll(
     `[data-error-type="${name}"]`
   );
   errorMessages.forEach((message) => {
-    const validationMessage = validErrorMessage(message);
-    const additionalMessage = isEmptyErrorMessage(message);
+    const inputValidationErrorMessage = inputFormatErrorMessage(message);
+    const inputEmptyErrorlMessage = requiredFieldErrorMessage(message);
 
     const isValid =
       !!input.value.trim() && input.value.match(regexPatterns[name]);
 
     message.classList.toggle("order-form__error-message--show", !isValid);
 
-    additionalMessage.classList.toggle(
+    inputEmptyErrorlMessage.classList.toggle(
       "order-form__error-message-empty--show",
       !isValid && submit
     );
-    validationMessage.classList.toggle(
+    inputValidationErrorMessage.classList.toggle(
       "order-form__error-message-validation--show",
       !isValid && !submit
     );
 
     input.classList.toggle("input--error", !isValid);
     input.classList.toggle("input--success", isValid);
-    error = !isValid;
+    submitBtn.classList.toggle("order-form__submit--error", !isValid);
   });
-
-  submitBtn.classList.toggle("order-form__submit--error", error);
 };
 
 export default updateErrorState;

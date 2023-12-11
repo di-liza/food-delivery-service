@@ -9,11 +9,11 @@ const refs = {
   backdrop: document.getElementById("backdrop"),
   submitBtn: document.getElementById("order-submit-btn"),
 
-  validErrorMessage: function (message) {
+  inputFormatErrorMessage: function (message) {
     return message.querySelector(".order-form__error-message-validation");
   },
 
-  isEmptyErrorMessage: function (message) {
+  requiredFieldErrorMessage: function (message) {
     return message.querySelector(".order-form__error-message-empty");
   },
 
