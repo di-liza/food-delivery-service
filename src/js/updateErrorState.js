@@ -27,6 +27,7 @@ const updateErrorState = (error, input, submit = false) => {
     );
 
     input.classList.toggle("input--error", !isValid);
+    input.classList.toggle("input--success", isValid);
     error = !isValid;
   });
 

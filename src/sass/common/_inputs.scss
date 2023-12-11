@@ -24,8 +24,9 @@
     }
   }
 
-  &--right {
+  &--success {
     border: 1px solid var(--dark-green);
+    background: var(--background-primary);
   }
   &--error {
     border: 1px solid var(--error-form);
