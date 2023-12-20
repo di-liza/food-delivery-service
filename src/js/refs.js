@@ -2,6 +2,8 @@ const refs = {
   openMenuBTN: document.getElementById("menu-open-btn"),
   closeMenuBTN: document.getElementById("mob-menu-close-btn"),
 
+  modal: document.querySelector(".modal"),
+
   orderFormEl: document.getElementById("order-form"),
   orderFormInputs: document.querySelectorAll("#order-form-input"),
 
