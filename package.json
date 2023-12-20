@@ -20,7 +20,6 @@
     "posthtml-include": "^1.7.4"
   },
   "dependencies": {
-    "animate.css": "^4.1.1",
     "modern-normalize": "^2.0.0"
   }
 }

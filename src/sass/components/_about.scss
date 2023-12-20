@@ -9,30 +9,42 @@
     @include section(231, 43);
   }
 
-  background-image: url("../images/backgrounds/about-background-mobile-320-1x.jpg");
-  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
 
-  @include retina {
-    background-image: url("../images/backgrounds/about-background-mobile-320-2x.jpg");
-  }
+    z-index: -1;
 
-  @include mobile {
-    background-image: url("../images/backgrounds/about-background-mobile-480-1x.jpg");
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../images/backgrounds/about-background-mobile-320-1x.jpg");
+    background-size: cover;
+
     @include retina {
-      background-image: url("../images/backgrounds/about-background-mobile-480-2x.jpg");
+      background-image: url("../images/backgrounds/about-background-mobile-320-2x.jpg");
     }
-  }
 
-  @include tablet {
-    background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
-    @include retina {
-      background-image: url("../images/backgrounds/about-background-tablet-2x.jpg");
+    @include mobile {
+      background-image: url("../images/backgrounds/about-background-mobile-480-1x.jpg");
+      @include retina {
+        background-image: url("../images/backgrounds/about-background-mobile-480-2x.jpg");
+      }
     }
-  }
-  @include desktop {
-    background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
-    @include retina {
-      background-image: url("../images/backgrounds/about-background-desktop-2x.jpg");
+
+    @include tablet {
+      background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
+      @include retina {
+        background-image: url("../images/backgrounds/about-background-tablet-2x.jpg");
+      }
+    }
+    @include desktop {
+      background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
+      @include retina {
+        background-image: url("../images/backgrounds/about-background-desktop-2x.jpg");
+      }
     }
   }
 

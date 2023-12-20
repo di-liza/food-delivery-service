@@ -3,13 +3,13 @@ import refs from "./refs.js";
 const { modal, orderBtn, backdrop, closeModalBtn } = refs;
 
 const handleOpenModal = () => {
-  modal.classList.replace("animate__zoomOut", "animate__zoomIn");
+  // modal.classList.add("active");
   backdrop.classList.add("openModal");
   document.body.style.overflow = "hidden";
 };
 
 const handleCloseModal = ({ target, currentTarget, code }) => {
-  modal.classList.replace("animate__zoomIn", "animate__zoomOut");
+  // modal.classList.remove("active");
   const closeBtnEl = target.closest("#close-modal");
 
   setTimeout(() => {
