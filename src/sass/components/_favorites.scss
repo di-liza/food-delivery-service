@@ -2,6 +2,9 @@
   @include section();
   text-align: center;
   @include tablet {
+    @include section(0, 100);
+  }
+  @include desktop {
     @include section(100, 100);
   }
 }

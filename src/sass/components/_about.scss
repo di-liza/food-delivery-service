@@ -3,51 +3,39 @@
   position: relative;
   @include tablet {
     @include section(150, 88);
+    top: -120px;
   }
   @include desktop {
     @include section(231, 43);
   }
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/backgrounds/about-background-mobile-320-1x.jpg");
-    background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
 
+  background-image: url("../images/backgrounds/about-background-mobile-320-1x.jpg");
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../images/backgrounds/about-background-mobile-320-2x.jpg");
+  }
+
+  @include mobile {
+    background-image: url("../images/backgrounds/about-background-mobile-480-1x.jpg");
     @include retina {
-      background-image: url("../images/backgrounds/about-background-mobile-320-2x.jpg");
-    }
-
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
-
-    @include mobile {
-      // top: 36px;
-      background-image: url("../images/backgrounds/about-background-mobile-480-1x.jpg");
-      @include retina {
-        background-image: url("../images/backgrounds/about-background-mobile-480-2x.jpg");
-      }
-    }
-
-    @include tablet {
-      top: 0;
-      background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
-      @include retina {
-        background-image: url("../images/backgrounds/about-background-tablet-2x.jpg");
-      }
-    }
-    @include desktop {
-      top: 0;
-      background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
-      @include retina {
-        background-image: url("../images/backgrounds/about-background-desktop-2x.jpg");
-      }
+      background-image: url("../images/backgrounds/about-background-mobile-480-2x.jpg");
     }
   }
+
+  @include tablet {
+    background-image: url("../images/backgrounds/about-background-tablet-1x.jpg");
+    @include retina {
+      background-image: url("../images/backgrounds/about-background-tablet-2x.jpg");
+    }
+  }
+  @include desktop {
+    background-image: url("../images/backgrounds/about-background-desktop-1x.jpg");
+    @include retina {
+      background-image: url("../images/backgrounds/about-background-desktop-2x.jpg");
+    }
+  }
+
   color: var(--text-primary);
 }
 
@@ -155,6 +143,10 @@
   border-radius: 50%;
   padding: 8px;
   margin-bottom: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about__item-title {
   margin-bottom: 16px;

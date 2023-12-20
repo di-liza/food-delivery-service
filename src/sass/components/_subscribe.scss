@@ -4,7 +4,7 @@
   font-size: 14px;
 
   @include tablet {
-    @include section(82, 100);
+    @include section(0, 100);
   }
   @include desktop {
     @include section(0, 64);

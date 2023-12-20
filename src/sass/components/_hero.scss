@@ -50,7 +50,7 @@
 .slider-wrap {
   position: absolute;
   top: 89px;
-  right: 0;
+  right: -20px;
   z-index: 9;
   width: 336px;
 
@@ -63,6 +63,8 @@
   display: none;
   @include tablet {
     overflow: hidden;
+    border-radius: 50%;
+    border: 14px solid var(--main-yellow);
     display: block;
     width: 320px;
     height: 320px;
@@ -89,14 +91,14 @@
   border-radius: 50%;
   width: 320px;
   height: 320px;
-  border: 14px solid var(--main-yellow);
+
   background-color: var(--background-primary);
 
   overflow: hidden;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
 
   @include desktop {
     width: 580px;
