@@ -12,13 +12,12 @@
   pointer-events: none;
 }
 .openModal {
-  display: block;
   opacity: 1;
-  pointer-events: visible;
+  pointer-events: initial;
 }
 
 .modal {
-  position: fixed;
+  position: absolute;
   opacity: 0;
   top: -200%;
   left: 50%;
