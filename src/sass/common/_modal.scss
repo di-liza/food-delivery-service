@@ -1,5 +1,5 @@
 .backdrop {
-  display: none;
+  // display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -7,32 +7,15 @@
   height: 100%;
   background-color: var(--backdrop);
   z-index: 1000;
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
+  pointer-events: none;
 }
-// .modal {
-//   position: fixed;
-//   top: 15%;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   background-color: aliceblue;
-//   width: 320px;
-//   // height: 449px;
-//   padding: 32px 20;
-//   text-align: center;
-
-//   border-radius: 30px;
-//   background: var(--main-yellow);
-
-//   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
-
-//   z-index: 2000;
-
-//   display: flex;
-//   justify-content: center;
-
-//   @include tablet {
-//     width: 458px;
-//   }
-// }
+.openModal {
+  display: block;
+  opacity: 1;
+  pointer-events: visible;
+}
 
 .modal {
   position: fixed;
@@ -62,17 +45,12 @@
   @include tablet {
     width: 458px;
   }
-
-  &--active {
-    opacity: 1;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    // transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
-  }
 }
-
-.openModal {
-  display: block;
+.active {
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
 }
 
 .modal__close-btn {
