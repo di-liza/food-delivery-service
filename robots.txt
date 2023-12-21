@@ -1,2 +1,4 @@
+# Заборонити доступ до /private/ для всіх веб-кравлерів
 User-agent: *
 Disallow: /private/
+

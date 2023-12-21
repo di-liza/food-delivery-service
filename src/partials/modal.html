@@ -1,6 +1,11 @@
 <div class="backdrop" id="backdrop">
   <div class="modal">
-    <button class="modal__close-btn" type="button" id="close-modal">
+    <button
+      class="modal__close-btn"
+      aria-label="close modal"
+      type="button"
+      id="close-modal"
+    >
       <img src="./icons/close-modal-icon.jpg" alt="" width="24" height="24" />
     </button>
 
@@ -10,11 +15,11 @@
         <li class="order-form__item">
           <label class="order-form__label" for="name">Name:</label>
           <input
-            class="input input--form"
+            class="input input--form js-order-form-input"
             name="name"
             type="text"
+            id="name"
             placeholder="Your name"
-            id="order-form-input"
           />
           <p class="order-form__error-message" data-error-type="name">
             <img
@@ -35,11 +40,11 @@
         <li class="order-form__item">
           <label class="order-form__label" for="phone">Phone:</label>
           <input
-            class="input input--form"
+            class="input input--form js-order-form-input"
             name="phone"
             type="number"
+            id="phone"
             placeholder="+38(0_ _) _ _ _   _ _   _ _"
-            id="order-form-input"
           />
           <p class="order-form__error-message" data-error-type="phone">
             <img
@@ -61,11 +66,11 @@
           <label class="order-form__label" for="mail">Email:</label>
 
           <input
-            class="input input--form"
+            class="input input--form js-order-form-input"
             name="mail"
+            id="mail"
             type="email"
             placeholder="example@gmail.com"
-            id="order-form-input"
           />
           <p class="order-form__error-message" data-error-type="mail">
             <img

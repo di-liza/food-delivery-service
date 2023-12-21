@@ -5,7 +5,7 @@ const refs = {
   modal: document.querySelector(".modal"),
 
   orderFormEl: document.getElementById("order-form"),
-  orderFormInputs: document.querySelectorAll("#order-form-input"),
+  orderFormInputs: document.querySelectorAll(".js-order-form-input"),
 
   errorFormMessage: document.querySelector(".error__message-pop-up"),
   backdrop: document.getElementById("backdrop"),
@@ -22,7 +22,7 @@ const refs = {
   orderBtn: document.querySelectorAll(".js-orderBtn"),
   backdrop: document.getElementById("backdrop"),
   closeModalBtn: document.getElementById("close-modal"),
-  subscriveFormEl: document.querySelectorAll("#subscribe-form"),
+  subscriveFormEl: document.querySelectorAll(".subscribe-form"),
 
   sliderLine: document.querySelector(".slider-line"),
 };
