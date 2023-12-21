@@ -1,4 +1,6 @@
 .hero {
+  position: relative;
+  z-index: 7;
   @include section(132px, 20px);
 
   @include tablet {

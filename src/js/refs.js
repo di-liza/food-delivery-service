@@ -19,7 +19,7 @@ const refs = {
     return message.querySelector(".order-form__error-message-empty");
   },
 
-  orderBtn: document.querySelectorAll("#order-btn"),
+  orderBtn: document.querySelectorAll(".js-orderBtn"),
   backdrop: document.getElementById("backdrop"),
   closeModalBtn: document.getElementById("close-modal"),
   subscriveFormEl: document.querySelectorAll("#subscribe-form"),

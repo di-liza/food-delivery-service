@@ -1,4 +1,5 @@
 .about {
+  z-index: 1;
   @include section(70, 72);
   position: relative;
   @include tablet {
