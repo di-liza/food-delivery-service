@@ -98,13 +98,10 @@
 
   overflow: hidden;
 
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-
   @include desktop {
     width: 580px;
     height: 580px;
+    padding: 15px;
   }
 }
 .slider-btn {
