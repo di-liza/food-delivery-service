@@ -1,4 +1,6 @@
 .favorites {
+  animation: fade linear;
+  animation-timeline: view();
   @include section();
   text-align: center;
   @include tablet {
@@ -90,5 +92,14 @@
   @include desktop {
     width: 315px;
     height: 315px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
