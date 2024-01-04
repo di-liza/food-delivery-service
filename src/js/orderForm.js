@@ -1,8 +1,14 @@
 import refs from "./refs.js";
 import updateErrorState from "./updateErrorState.js";
 
-const { orderFormEl, orderFormInputs, errorFormMessage, backdrop, submitBtn } =
-  refs;
+const {
+  popUp,
+  orderFormEl,
+  orderFormInputs,
+  errorFormMessage,
+  backdrop,
+  submitBtn,
+} = refs;
 
 let error = false;
 
@@ -38,9 +44,8 @@ const handleFormSubmit = (e) => {
     submitBtn.classList.remove("order-form__submit--error");
     backdrop.classList.remove("openModal");
     document.body.style.overflow = "scroll";
-    console.log(
-      '"Your order details have been successfully submitted. Please await contact from our operator. Have a great day!"'
-    );
+
+    popUp.classList.add("pop-up--show");
     resetForm();
   }
 };

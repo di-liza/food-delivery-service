@@ -1,0 +1,43 @@
+.pop-up {
+  display: none;
+  background-color: var(--dark-green);
+  color: var(--background-primary);
+  opacity: 0.8;
+  border-radius: 20px;
+  width: 360px;
+  padding: 25px;
+  font-size: 16px;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  animation: sideIn 1s cubic-bezier(0.42, 0, 0, 1.25) forwards,
+    sideOut 1s cubic-bezier(0.42, 0, 0, 1.25) 2s both;
+  position: fixed;
+  z-index: 1000;
+  text-align: center;
+  &--show {
+    display: block;
+  }
+}
+
+@keyframes sideIn {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: 200px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes sideOut {
+  0% {
+    left: 50%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: -100%;
+  }
+}

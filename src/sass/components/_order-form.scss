@@ -75,6 +75,7 @@
 
   &--show {
     display: flex;
+    animation: showError 0.5s cubic-bezier(0.42, 0, 0, 1.21) forwards;
   }
 }
 .order-form__error-message-validation {
@@ -93,7 +94,6 @@
 .error__message-pop-up {
   display: none;
   opacity: 0;
-  // visibility: hidden;
 
   width: 165px;
   height: 54px;
@@ -114,6 +114,9 @@
   transition: opacity 0.5s ease-in-out;
 
   &--show {
+    transform: scale(0);
+    animation: popUp 0.2s cubic-bezier(0, 1.31, 0.58, 1) forwards,
+      popUp 0.2s cubic-bezier(0, 1.31, 0.58, 1) 2s forwards reverse;
     display: block;
     opacity: 1;
     // visibility: visible;
@@ -137,4 +140,23 @@
   text-align: center;
   padding: 10px;
   border-radius: 10px;
+}
+
+@keyframes showError {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes popUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }

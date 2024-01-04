@@ -7,6 +7,7 @@ const refs = {
   orderFormEl: document.getElementById("order-form"),
   orderFormInputs: document.querySelectorAll(".js-order-form-input"),
 
+  popUp: document.querySelector(".pop-up"),
   errorFormMessage: document.querySelector(".error__message-pop-up"),
   backdrop: document.getElementById("backdrop"),
   submitBtn: document.getElementById("order-submit-btn"),
