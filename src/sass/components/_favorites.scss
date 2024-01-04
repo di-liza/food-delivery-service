@@ -1,6 +1,4 @@
 .favorites {
-  animation: fade linear;
-  animation-timeline: view();
   @include section();
   text-align: center;
   @include tablet {
