@@ -3,6 +3,8 @@
   padding: 0 20px;
   margin: 0 auto;
 
+  // overflow-x: hidden;
+
   @include mobile {
     width: 480px;
   }

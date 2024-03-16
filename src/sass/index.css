@@ -54,7 +54,12 @@ p {
 /* Стили полосы прокрутки */
 ::-webkit-scrollbar-thumb {
   border-radius: 15px;
-  background-color: rgba(169, 169, 169, 0.7); /* Цвет скроллбара с прозрачностью */
+  background-color: rgba(
+    169,
+    169,
+    169,
+    0.7
+  ); /* Цвет скроллбара с прозрачностью */
 }
 
 /* Стили трека (фона) полосы прокрутки */
@@ -755,4 +760,4 @@ p {
   margin-bottom: 40px;
   color: var(--dark-green);
   text-decoration: underline;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
