@@ -24,6 +24,7 @@
   position: absolute;
   top: 22px;
   right: 18px;
+  overflow: hidden;
 
   @include tablet {
     display: none;
