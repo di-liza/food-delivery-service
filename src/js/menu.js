@@ -1,7 +1,6 @@
 import refs from "./refs.js";
 
 const { openMenuBTN, closeMenuBTN, menuConatiner } = refs;
-console.log("menuConatiner:", menuConatiner);
 
 const menu = document.querySelector(".mob-menu");
 
