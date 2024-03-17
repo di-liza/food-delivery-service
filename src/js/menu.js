@@ -1,6 +1,7 @@
 import refs from "./refs.js";
 
-const { openMenuBTN, closeMenuBTN } = refs;
+const { openMenuBTN, closeMenuBTN, menuConatiner } = refs;
+console.log("menuConatiner:", menuConatiner);
 
 const menu = document.querySelector(".mob-menu");
 
@@ -10,13 +11,25 @@ const handleOpenMenu = () => {
   menu.classList.remove("swing-out-top-fwd");
 };
 
-const handleCloseMenu = ({ target }) => {
-  if (target.matches("a") || target.matches("svg")) {
-    menu.classList.remove("swing-in-top-bck");
-    menu.classList.add("swing-out-top-fwd");
-    menu.classList.contains("swing-out-top-fwd")?.menu.classList.remove("open");
+const handleCloseMenu = () => {
+  menu.classList.remove("swing-in-top-bck");
+  menu.classList.add("swing-out-top-fwd");
+
+  const isMenuHasCloseClass = menu.classList.contains("swing-out-top-fwd");
+
+  if (isMenuHasCloseClass) {
+    setTimeout(() => {
+      menu.classList.remove("open");
+    }, 1000);
   }
 };
 
 openMenuBTN.addEventListener("click", handleOpenMenu);
 closeMenuBTN.addEventListener("click", handleCloseMenu);
+
+menuConatiner.addEventListener("click", ({ target }) => {
+  console.log("target:", target);
+  if (target.matches("a") || target.matches("svg")) {
+    handleCloseMenu();
+  }
+});
