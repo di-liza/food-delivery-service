@@ -23,9 +23,3 @@
 @import "./components/footer";
 
 @import "./components/order-form";
-[data-aos] {
-  visibility: hidden;
-}
-[data-aos].aos-animate {
-  visibility: visible;
-}

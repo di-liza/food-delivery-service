@@ -23,6 +23,7 @@ button {
   cursor: pointer;
   //  cursor: url("../icons/cursor-pointer.png"), pointer;
   font-family: inherit;
+  overflow-x: hidden;
 }
 
 ul {
