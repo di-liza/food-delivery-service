@@ -1,7 +1,6 @@
 const refs = {
-  menuConatiner: document.querySelector(".mob-menu"),
+  menu: document.querySelector(".mob-menu"),
   openMenuBTN: document.getElementById("menu-open-btn"),
-  closeMenuBTN: document.getElementById("mob-menu-close-btn"),
 
   modal: document.querySelector(".modal"),
 
